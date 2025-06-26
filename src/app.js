@@ -21,6 +21,18 @@ app.get("/admin/deleteAdmin", (req,res) => {
     res.send("delete admin");
 });
 
+app.get("/getUserData", (req,res) => {
+
+    throw new Error("qasdfvbn");
+    res.send("data received of users");
+});
+app.use("/", (err,req,res,next) => {
+    if(err) {
+    console.error("error---> ", err);
+    res.status(500).send("Something went wrong");
+    }
+})
+
 app.listen(8000, () => {
     console.log("server is up and running on PORT: 8000");
 });
